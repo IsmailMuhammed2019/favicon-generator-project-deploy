@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link href="./assets/home_base.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./assests/css/header.css">
+  <link href="../static/home_base.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../statics/assests/css/header.css">
   <title>GenZicons</title>
 
 </head>
@@ -36,14 +36,14 @@
       </div>
 
     </div>
-    <a href="#"><img src="./assests/images/Genzwhite.jpg" alt="Logo"
+    <a href="#"><img src="../statics/assests/images/Genzwhite.jpg" alt="Logo"
         class="home-active-state-project-team66favicon-generatorremovebgpreview" /></a>
     <div class="home-active-state-frame215">
-      <a href="#"><span class="home-active-state-text93"><span>Signup</span></span>
+      <a href="{% url 'accounts:register' %}"><span class="home-active-state-text93"><span>Signup</span></span></a>
       </a>
     </div>
     <div class="home-active-state-frame216">
-      <a href="#"><span class="home-active-state-text93"><span>Signin</span></span>
+      <a href="{% url 'accounts:login' %}"><span class="home-active-state-text93"><span>Signin</span></span></a>
       </a>
     </div>
   </div>
@@ -139,7 +139,7 @@
         alt="Rectangle7782:55" class="home-active-state-rectangle778" />
       <span class="home-active-state-text29"><span>Why GenZicon?</span></span>
       <div class="home-active-state-frame210">
-        <img src="/playground_assets/ellipse72%3A58-bl0j.svg" alt="Ellipse72:58" class="home-active-state-ellipse7" />
+        <img src="../static/assests/images/playground_assets/ellipse72%3A58-bl0j.svg" alt="Ellipse72:58" class="home-active-state-ellipse7" />
         <span class="home-active-state-text31 bodyBold9">
           <span>Easy and fast to use</span>
         </span>
@@ -151,7 +151,7 @@
         </span>
       </div>
       <div class="home-active-state-frame212">
-        <img src="/playground_assets/ellipse72%3A62-urdg.svg" alt="Ellipse72:62" class="home-active-state-ellipse71" />
+        <img src="../static/assests/images/playground_assets/ellipse72%3A62-urdg.svg" alt="Ellipse72:62" class="home-active-state-ellipse71" />
         <span class="home-active-state-text35 bodyBold9">
           <span>Instant feedback</span>
         </span>
@@ -163,7 +163,7 @@
         <div class="home-active-state-akariconsslackfill"></div>
       </div>
       <div class="home-active-state-frame211">
-        <img src="/playground_assets/ellipse72%3A68-4mqg.svg" alt="Ellipse72:68" class="home-active-state-ellipse72" />
+        <img src="../static/assests/images/playground_assets/ellipse72%3A68-4mqg.svg" alt="Ellipse72:68" class="home-active-state-ellipse72" />
         <span class="home-active-state-text39 bodyBold9">
           <span>Embed your code</span>
         </span>
@@ -175,7 +175,7 @@
         </span>
       </div>
       <div class="home-active-state-frame213">
-        <img src="/playground_assets/ellipse72%3A72-2dd7.svg" alt="Ellipse72:72" class="home-active-state-ellipse73" />
+        <img src="../static/assests/images/playground_assets/ellipse72%3A72-2dd7.svg" alt="Ellipse72:72" class="home-active-state-ellipse73" />
         <span class="home-active-state-text43 bodyBold9">
           <span>Save data</span>
         </span>
@@ -231,28 +231,28 @@
           </span>
           <div class="home-active-state-frame236">
             <div class="home-active-state-frame232">
-              <img src="/playground_assets/akariconstwitterfill2%3A98-40g.svg" alt="akariconstwitterfill2:98"
+              <img src="../static/assests/images/playground_assets/akariconstwitterfill2%3A98-40g.svg" alt="akariconstwitterfill2:98"
                 class="home-active-state-akariconstwitterfill" />
               <span class="home-active-state-text75 bodyRegular5">
                 <span>Twitter</span>
               </span>
             </div>
             <div class="home-active-state-frame233">
-              <img src="/playground_assets/bxlfacebook2%3A102-dx1f.svg" alt="bxlfacebook2:102"
+              <img src="../static/assests/images/playground_assets/bxlfacebook2%3A102-dx1f.svg" alt="bxlfacebook2:102"
                 class="home-active-state-bxlfacebook" />
               <span class="home-active-state-text77 bodyRegular5">
                 <span>Facebook</span>
               </span>
             </div>
             <div class="home-active-state-frame234">
-              <img src="/playground_assets/akariconsgithubfill2%3A106-7o9q.svg" alt="akariconsgithubfill2:106"
+              <img src="../static/assests/images/playground_assets/akariconsgithubfill2%3A106-7o9q.svg" alt="akariconsgithubfill2:106"
                 class="home-active-state-akariconsgithubfill" />
               <span class="home-active-state-text79 bodyRegular5">
                 <span>Github</span>
               </span>
             </div>
             <div class="home-active-state-frame235">
-              <img src="/playground_assets/akariconsslackfill2%3A110-8rvs.svg" alt="akariconsslackfill2:110"
+              <img src="../static/assests/images/playground_assets/akariconsslackfill2%3A110-8rvs.svg" alt="akariconsslackfill2:110"
                 class="home-active-state-akariconsslackfill2" />
               <span class="home-active-state-text81 bodyRegular5">
                 <span>Slack</span>
@@ -296,14 +296,14 @@
           </div>
 
         </div>
-        <a href="#"><img src="images/fav.png" alt="Logo"
+        <a href="#"><img src="../static/assests/images/logo.png" alt="Logo"
             class="home-active-state-project-team66favicon-generatorremovebgpreview" /></a>
         <div class="home-active-state-frame215">
-          <a href="#"><span class="home-active-state-text93"><span>Signup</span></span>
+          <a href="{% url 'accounts:register' %}"><span class="home-active-state-text93"><span>Signup</span></span></a>
           </a>
         </div>
         <div class="home-active-state-frame216">
-          <a href="#"><span class="home-active-state-text94"><span>Signin</span></span>
+          <a href="{% url 'accounts:login' %}"></a><span class="home-active-state-text94"><span>Signin</span></span></a>
           </a>
         </div>
       </div>
