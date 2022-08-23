@@ -1,1 +1,1 @@
-web: gunicorn GenZIcons.wsgi --log-file -
+web:gunicorn GenZIcons.wsgi --log-file -
