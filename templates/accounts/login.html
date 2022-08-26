@@ -1,76 +1,42 @@
-{% extends 'accounts/base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-    <title>Sign In</title>
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../static/assests/css/SignIn.css">
+    <title>Signup Page</title>
+</head>
 
-{% block style %}
-    <link rel="stylesheet" href="{% static 'accounts/login.css' %}">
-{% endblock %}
-
-{% block script %}  
-    <script defer src="{% static 'accounts/login.js' %}"></script>
-{% endblock %}
-
-
-{% block body %}
-    <!-- right portion of the screen -->
-          <div class="home-active-state-header">
-        <div class="home-active-state-frame199">
-          <div class="home-active-state-frame196">
-            <span class="home-active-state-text87 bodyRegular4">
-              <span><a href="#">Favicons</a></span>
-            </span>
-          </div>
-          <div class="home-active-state-frame197">
-            <span class="home-active-state-text89 bodyRegular4">
-              <span><a href="#">Contact us</a></span>
-            </span>
-          </div>
-          <div class="home-active-state-frame198">
-            <span class="home-active-state-text91 bodyRegular4">
-              <span><a href="#">Tutorial</a></span>
-            </span>
-          </div>
-
-        </div>
-        <a href="#"><img src="../static/assests/images/logo.png" alt="Logo"
-            class="home-active-state-project-team66favicon-generatorremovebgpreview" /></a>
-        <div class="home-active-state-frame215">
-          <a href="{% url 'accounts:register' %}"><span class="home-active-state-text93"><span>Signup</span></span></a>
-          </a>
-        </div>
-        <div class="home-active-state-frame216">
-          <a href="{% url 'accounts:login' %}"><span class="home-active-state-text94"><span>Signin</span></span></a>
-          </a>
-        </div>
-      </div>
-    <div class="container1">
-        
-        <div class="signup">
-            
-            <h2>Welcome !</h2>
-            <p>Please register, then you are all set to go convert.</p>
-            <a href="{% url 'accounts:register' %}"><button>Sign Up</button></a>
+<body>
+    <!-- Main box -->
+    <div id="main1">
+        <img src="../../static/assests/images/logo.png" id="logo">
+        <div class="toggle">
+            <label class="switch">
+                <input type="checkbox" id="toggle" />
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
-    <!-- left portion -->
-    <div class="container2">
-        <div class="logo">
-            <a href="{% url 'home:index' %}">
-            
-            </a>
-        </div>
-        <div class="login">
-            <h2>Log in to Account</h2>
-            {% if messages %}
-                {% for message in messages %}
-                    <p class="{{ message.tags }} django-message">{{ message }}</p>
-                {% endfor %}
-            {% else %}
-                <p class="welcome">Welcome back.</p>
-            {% endif %}
+    <div id="main">
+        <div class="Wrapper">
+            <h1>Sign In</h1>
+            <p class="create">Enter your details to sign in</p>
+            <br>
+            <a href="#" class="Social-media"><span><i class="fa-brands fa-google"></i></i></span> Sign In with
+                Google</a>
+            <br>
+            <a href="#" class="Social-media facebook"><span><i class="fa-brands fa-facebook"></i></span>Sign In with
+                Facebook</a> <br>
+            <h3 class="hr-lines">OR</h3>
+
             <form id="form" class="form" action="{% url 'accounts:login' %}" method="post">
                 {% csrf_token %}
                 <div class="form-control">
@@ -97,5 +63,14 @@
                 </div>
             </form>
         </div>
+
+        <div id="img2">
+            <img src="../../static/assests/images/signin.JPG">
+        </div>
     </div>
-{% endblock %}
+
+    <script src="../../static/assests/js/index.js"></script>
+    <script src="../../static/assests/js/favicon.js"></script>
+</body>
+
+</html>

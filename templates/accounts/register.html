@@ -1,50 +1,47 @@
-{% extends 'accounts/base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-    <title>Sign Up</title>
-{% endblock %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assests/css/signup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="https://kit.fontawesome.com/89039e6814.js" crossorigin="anonymous"></script>
+  <title>Sign up</title>
+  <link rel="stylesheet" href="../../static/assests/css/Register.css">
+</head>
 
-{% block style %}
-    <link rel="stylesheet" href="{% static 'accounts/register.css' %}">
-{% endblock %}
-
-{% block script %}  
-    <script defer src="{% static 'accounts/register.js' %}"></script>
-{% endblock %}
-
-
-{% block body %}
-    <!-- left portion of the screen -->
-    <div class="container1">
-        <div class="logo">
-            <a href="{% url 'home:index' %}">
-                
-            </a>
-        </div>
-
-        <div class="signin">
-            
-            <h2>Welcome Back !</h2>
-            <p>Please Login to access your beautiful favicons</p>
-            <a href="{% url 'accounts:login' %}"> <button>Sign In</button></a>
-        </div>
+<body>
+  <div id="main1">
+    <img src="../../static/assests/images/logo.png" id="logo">
+    <div class="toggle">
+      <label class="switch">
+        <input type="checkbox" id="toggle" />
+        <span class="slider round"></span>
+      </label>
     </div>
-    <!-- right portion -->
-    <div class="container2">
-        <a href="{% url 'home:index' %}">
-            <img src="{% static 'assets/accounts/Frame_115.svg' %}" alt="" class="blue">
-        </a>
-        <div class="create">
-            <h2>Create Account</h2>
-            {% if messages %}
-                {% for message in messages %}
-                    <p class=" {{ message.tags }} ">{{ message }}</p>
-                {% endfor %}
-            {% else %}
-                <p class="getstarted">Lets get you started.</p>
-            {% endif %}
-            <form id="form" class="form" action="{% url 'accounts:register' %}" method="post">
+  </div>
+  <div id="main">
+    <div class="form-container">
+      <div class="form-content">
+        <h1>Sign Up</h1>
+        <p>Enter your details to create an account</p>
+
+        <button id="customBtn" class="customGPlusSignIn">
+          <i class="fa-brands fa-google"></i>
+          <span class="buttonText">Sign Up with Google</span>
+        </button>
+        <div id="name"></div>
+        <button id="customBtn2" class="customFBSignIn">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span class="buttonText">Sign Up with Facebook</span>
+        </button>
+        <h4>OR</h4>
+        <form id="form" class="form" action="{% url 'accounts:register' %}" method="post">
                 {% csrf_token %}
                 <div class="form-control">
                     <input type="text" placeholder="First name" id="fname" onkeyup="validateFname()" name="firstname" />
@@ -83,6 +80,20 @@
                 
 
             </form>
+        <div>
+          <div id="img2">
+            <img src="../../static/assests/images/signin.JPG">
+          </div>
         </div>
-    </div>
-{% endblock %}
+
+        <script src="../../static/assests/js/favicon.js"></script>
+        <script src="../../static/assests/js/signup.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
